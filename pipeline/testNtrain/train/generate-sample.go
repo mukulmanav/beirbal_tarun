@@ -47,6 +47,26 @@ const (
 	pii_us_vin
 	pii_serial_number
 	pii_date
+
+	pfi_card_cvv
+	pfi_credit_card_expiry
+	phi_blood_type
+	phi_drug
+	phi_injury
+	pii_city
+	pii_coordinates
+	pii_date_interval
+	pii_date_of_birth
+	pii_family_name
+	pii_filename
+	pii_given_name
+	pii_state
+	pii_language
+	pii_marital_status
+	phi_medical_process
+	pii_occupation
+	pii_organization
+	pii_origin
 )
 
 var fieldMap = map[fieldType]fn{
@@ -79,6 +99,26 @@ var fieldMap = map[fieldType]fn{
 	pii_serial_number:         fields.GetTextForFieldSerialNumber,
 	pii_eu_driver_license:     fields.GetTextForFieldEuDriverLicence,
 	pii_date:                  fields.GetTextForFieldDate,
+
+	pfi_card_cvv:           fields.GetTextForFieldCardCvv,
+	pfi_credit_card_expiry: fields.GetTextForFieldCreditCardExpiry,
+	phi_blood_type:         fields.GetTextForFieldBloodType,
+	phi_drug:               fields.GetTextForFieldDrug,
+	phi_injury:             fields.GetTextForFieldInjury,
+	pii_city:               fields.GetTextForFieldCity,
+	pii_coordinates:        fields.GetTextForFieldCoordinates,
+	pii_date_interval:      fields.GetTextForFieldDateInterval,
+	pii_date_of_birth:      fields.GetTextForFieldDateOfBirth,
+	pii_family_name:        fields.GetTextForFieldFamilyName,
+	pii_filename:           fields.GetTextForFieldFilename,
+	pii_given_name:         fields.GetTextForFieldGivenName,
+	pii_state:              fields.GetTextForFieldState,
+	pii_language:           fields.GetTextForFieldLanguage,
+	pii_marital_status:     fields.GetTextForFieldMaritalstatus,
+	phi_medical_process:    fields.GetTextForFieldMedicalProcess,
+	pii_occupation:         fields.GetTextForFieldOccupation,
+	pii_organization:       fields.GetTextForFieldOrganization,
+	pii_origin:             fields.GetTextForFieldOrigin,
 }
 
 var csvFilemap = map[string][]fieldType{
